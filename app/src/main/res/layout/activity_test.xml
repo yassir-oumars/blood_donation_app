@@ -1,0 +1,505 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TestActivity">
+
+        <!-- Question 1: Sexe -->
+        <TextView
+            android:id="@+id/question1Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sexe :"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question1Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/maleRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Homme" />
+
+            <RadioButton
+                android:id="@+id/femaleRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Femme" />
+
+        </RadioGroup>
+
+        <!-- Question 2: Quel âge avez-vous ? -->
+        <TextView
+            android:id="@+id/question2Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quel âge avez-vous ?"
+            android:textSize="16sp"
+            android:layout_below="@id/genderRadioGroup"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/ageRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question2Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/ageLessThan18RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moins de 18 ans" />
+
+            <RadioButton
+                android:id="@+id/age18To70RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18 à 70 ans" />
+
+            <RadioButton
+                android:id="@+id/age71AndAboveRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="71 ans et plus" />
+
+        </RadioGroup>
+
+        <!-- Question 3: Quel est votre poids? -->
+        <TextView
+            android:id="@+id/question3Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quel est votre poids ?"
+            android:textSize="16sp"
+            android:layout_below="@id/ageRadioGroup"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/weightRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question3Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/weightLessThan50RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moins de 50 kg" />
+
+            <RadioButton
+                android:id="@+id/weight50AndAboveRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50 kg et plus" />
+
+        </RadioGroup>
+
+        <!-- Question 4: Votre dernier don date de moins de 8 semaines ? -->
+        <TextView
+            android:id="@+id/question4Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Votre dernier don date de moins de 8 semaines ?"
+            android:textSize="16sp"
+            android:layout_below="@id/weightRadioGroup"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/lastDonationRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question4Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/lastDonationYesRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oui" />
+
+            <RadioButton
+                android:id="@+id/lastDonationNoRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non" />
+
+        </RadioGroup>
+
+        <!-- Question 5: Avez-vous été testé positif pour le sida, l'hépatite C ou la syphilis ? -->
+        <TextView
+            android:id="@+id/question5Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avez-vous été testé positif pour le sida, l'hépatite C ou la syphilis ?"
+            android:textSize="16sp"
+            android:layout_below="@id/lastDonationRadioGroup"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/hivHepatitisRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question5Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/hivHepatitisYesRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oui" />
+
+            <RadioButton
+                android:id="@+id/hivHepatitisNoRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non" />
+
+        </RadioGroup>
+
+        <!-- Question 6: Avez-vous eu un cancer au cours de votre vie ? -->
+        <TextView
+            android:id="@+id/question6Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avez-vous eu un cancer au cours de votre vie ?"
+            android:textSize="16sp"
+            android:layout_below="@id/hivHepatitisRadioGroup"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/cancerRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question6Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/cancerYesRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oui" />
+
+            <RadioButton
+                android:id="@+id/cancerNoRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non" />
+
+        </RadioGroup>
+
+        <!-- Question 7: Êtes-vous traités pour une maladie chronique ? -->
+        <TextView
+            android:id="@+id/question7Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Êtes-vous traités pour une maladie chronique ?"
+            android:textSize="16sp"
+            android:layout_below="@id/cancerRadioGroup"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/chronicDiseaseRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question7Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/chronicDiseaseYesRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oui" />
+
+            <RadioButton
+                android:id="@+id/chronicDiseaseNoRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non" />
+
+        </RadioGroup>
+
+        <!-- Question 8: Avez-vous ressenti une douleur thoracique ou un essoufflement anormal à la suite d'un effort ? -->
+        <TextView
+            android:id="@+id/question8Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avez-vous ressenti une douleur thoracique ou un essoufflement anormal à la suite d'un effort ?"
+            android:textSize="16sp"
+            android:layout_below="@id/chronicDiseaseRadioGroup"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/chestPainRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question8Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/chestPainYesRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oui" />
+
+            <RadioButton
+                android:id="@+id/chestPainNoRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non" />
+
+        </RadioGroup>
+
+        <!-- Question 9: Avez-vous déjà eu une transfusion de sang ou une greffe d'organe ? -->
+        <TextView
+            android:id="@+id/question9Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avez-vous déjà eu une transfusion de sang ou une greffe d'organe ?"
+            android:textSize="16sp"
+            android:layout_below="@id/chestPainRadioGroup"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/transfusionOrganRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question9Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/transfusionOrganYesRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oui" />
+
+            <RadioButton
+                android:id="@+id/transfusionOrganNoRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non" />
+
+        </RadioGroup>
+
+        <!-- Question 10: Avez-vous pris des drogues illicites ou un tatouage dans les quatre derniers mois ? -->
+        <TextView
+            android:id="@+id/question10Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avez-vous pris des drogues illicites ou un tatouage dans les quatre derniers mois ?"
+            android:textSize="16sp"
+            android:layout_below="@id/transfusionOrganRadioGroup"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/drugsTattooRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question10Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/drugsTattooYesRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oui" />
+
+            <RadioButton
+                android:id="@+id/drugsTattooNoRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non" />
+
+        </RadioGroup>
+
+        <!-- Question 11: Êtes-vous suivi par votre médecin pour une anémie ? -->
+        <TextView
+            android:id="@+id/question11Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Êtes-vous suivi par votre médecin pour une anémie ?"
+            android:textSize="16sp"
+            android:layout_below="@id/drugsTattooRadioGroup"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/anemiaRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question11Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/anemiaYesRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oui" />
+
+            <RadioButton
+                android:id="@+id/anemiaNoRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non" />
+
+        </RadioGroup>
+
+        <!-- Question 12: Avez-vous été opéré dans les 4 derniers mois ? -->
+        <TextView
+            android:id="@+id/question12Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avez-vous été opéré dans les 4 derniers mois ?"
+            android:textSize="16sp"
+            android:layout_below="@id/anemiaRadioGroup"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/surgeryRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question12Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/surgeryYesRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oui" />
+
+            <RadioButton
+                android:id="@+id/surgeryNoRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non" />
+
+        </RadioGroup>
+
+        <!-- Question 13: Avez-vous eu de la fièvre dans les deux dernières semaines ? -->
+        <TextView
+            android:id="@+id/question13Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avez-vous eu de la fièvre dans les deux dernières semaines ?"
+            android:textSize="16sp"
+            android:layout_below="@id/surgeryRadioGroup"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/feverRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question13Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/feverYesRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oui" />
+
+            <RadioButton
+                android:id="@+id/feverNoRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non" />
+
+        </RadioGroup>
+
+        <!-- Question 14: Avez-vous eu des soins dentaires depuis 24 heures ? -->
+        <TextView
+            android:id="@+id/question14Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avez-vous eu des soins dentaires depuis 24 heures ?"
+            android:textSize="16sp"
+            android:layout_below="@id/feverRadioGroup"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/dentalCareRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question14Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/dentalCareYesRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oui" />
+
+            <RadioButton
+                android:id="@+id/dentalCareNoRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non" />
+
+        </RadioGroup>
+
+        <!-- Question 15: Prenez-vous des médicaments, même tous les jours ? -->
+        <TextView
+            android:id="@+id/question15Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prenez-vous des médicaments, même tous les jours ?"
+            android:textSize="16sp"
+            android:layout_below="@id/dentalCareRadioGroup"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/medicationRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question15Text"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/medicationYesRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oui" />
+
+            <RadioButton
+                android:id="@+id/medicationNoRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non" />
+
+        </RadioGroup>
+
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/medicationRadioGroup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="Suivant" />
+
+        <!-- Restart Button -->
+        <Button
+            android:id="@+id/restartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nextButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Recommencer" />
+
+    </RelativeLayout>
+</ScrollView>

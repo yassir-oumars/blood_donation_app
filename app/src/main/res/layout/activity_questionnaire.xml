@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:background="@drawable/photo2"
+    tools:context=".QuestionnaireActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="S'il vous plaît, répondez aux questions suivantes."
+        android:textColor="@color/black"
+        android:textSize="25dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        android:background="@drawable/shape_questionnaire">
+        <TextView
+            android:id="@+id/question1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:text="Question 1 :  Votre nom et prénom?" />
+
+        <EditText
+            android:id="@+id/etNomPrenom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/question1"
+            />
+
+        <TextView
+            android:id="@+id/question2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:layout_below="@id/etNomPrenom"
+            android:text="Question 2 :  Quel est votre groupe sanguin?" />
+
+        <EditText
+            android:id="@+id/etgroupblood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question2" />
+
+
+        <TextView
+            android:id="@+id/question3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:layout_below="@id/etgroupblood"
+            android:text="Question 3 :  Votre numéro de téléphone?" />
+
+        <EditText
+            android:id="@+id/etNumeroTelephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question3"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/question4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:layout_below="@id/etNumeroTelephone"
+            android:text="Question 4 :  Votre adresse?" />
+
+        <EditText
+            android:id="@+id/etAdresse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question4" />
+        <TextView
+            android:id="@+id/question5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:layout_below="@id/etAdresse"
+            android:text="Question 5 :  Votre photo de profil?" />
+
+        <EditText
+            android:id="@+id/surl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question5" />
+
+        <Button
+            android:id="@+id/btnEnvoyer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/surl"
+            android:text="Envoyer"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_email"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

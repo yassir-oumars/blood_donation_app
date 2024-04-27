@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="25dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/profil_blood"
+            android:layout_centerVertical="true"
+            android:id="@+id/img1"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/purple_700"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nom de personne "
+            android:textSize="22dp"
+            android:layout_toRightOf="@id/img1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="40dp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"/>
+        <ImageView
+            android:id="@+id/icon_phone"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/name"
+            android:layout_toRightOf="@id/img1"
+            android:src="@drawable/phone_icon1"/>
+
+        <TextView
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@id/icon_phone"
+            android:text="Numero de phone "
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <ImageView
+        android:id="@+id/icon_location"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/icon_phone"
+        android:layout_toRightOf="@id/img1"
+        android:src="@drawable/location_icon"/>
+
+        <TextView
+            android:id="@+id/adresse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneNumber"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@id/icon_phone"
+            android:text="Adresse"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+
+        <ImageView
+            android:id="@+id/img_blood"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/blood_icon"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="350dp"/>
+
+        <TextView
+            android:id="@+id/typeBlood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="350dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/img_blood"
+            android:text="AB"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textSize="17dp" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
